@@ -15,7 +15,7 @@ const DEFAULT_CATEGORIES = [
 ];
 
 async function seed() {
-  const client = postgres(process.env.DATABASE_URL!, { ssl: "require" });
+  const client = postgres(process.env.DATABASE_URL!);
   const db = drizzle(client);
 
   console.log("Seeding default categories...");
